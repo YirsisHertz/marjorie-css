@@ -1,0 +1,115 @@
+
+/**
+*
+* Navbar Design
+*
+*/
+
+/* <nav> Tag */
+.navbar {
+  padding: 0.9375rem 0.625rem;
+  background-color: var(--dark);
+}
+
+/* Navbar Fixed */
+
+.navbar.fixed {
+  position: sticky;
+  top: 0;
+}
+
+/* Container For Navbar Elements use <ul> Tag */
+
+.nv-components {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+/* Icon for Navbar use <li> Tag */
+
+.navbar-icon {
+  float: left;
+  padding: 0.625rem 0.625rem;
+  color: var(--color);
+}
+
+/* Links en la parte Izquierda de la pantalla <li> Tag */
+
+.navbar-element {
+  float: left;
+}
+
+.navbar-item {
+  padding: 0 0.5rem;
+  color: var(--color);
+}
+
+.navbar-element .navbar-item {
+  display: block;
+  color: var(--color);
+  text-align: center;
+  padding: 0.875rem 1rem;
+  text-decoration: none;
+  overflow: hidden;
+  list-style: none;
+}
+
+.navbar-element .navbar-item:hover {
+  color: var(--color);
+  text-align: center;
+  text-decoration: none;
+  background: var(--hover-menu);
+}
+
+/* Links en la parte Derecha de la pantalla <li> Tag */
+
+.navbar-end {
+  float: right;
+}
+
+.navbar-end .navbar-item {
+  display: block;
+  color: var(--color);
+  text-align: center;
+  padding: 0.875rem 1rem;
+  text-decoration: none;
+  overflow: hidden;
+  list-style: none;
+}
+
+.navbar-item:hover {
+  background-color: var(--hover-menu);
+}
+
+/* Botones Activos en la barra de navegacion para resaltarlos <li> Tag */
+
+.active {
+  background-color: var(--active);
+}
+
+.active:hover {
+  background-color: var(--active-hover);
+}
+
+/* Responsive Navbar */
+
+@media screen and (max-width: 26.5625rem) {
+  .navbar-icon {
+    float: none;
+    text-align: center;
+    display: block;
+    width: 100%;
+  }
+  .navbar-element {
+    float: none;
+  }
+  .navbar-end {
+    float: none;
+  }
+  .navbar-item {
+    display: block;
+    width: 100%;
+  }
+}

@@ -1,0 +1,397 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+
+:root {
+  --bg: #fcfcfc;
+  --color: snow;
+  --primary: #5e60ce;
+  --primary-contast: #5355b5;
+  --complementary: #cfb64a;
+  --danger: #cf7774;
+  --success: #55cf80;
+  --dark: #625a69;
+  --purple: #6d389c;
+  --btn-fsize: 1.0625rem;
+  --active: #00d1b2;
+  --active-hover: #48c774;
+  --menu: #625a69;
+  --hover-menu: #333;
+}
+
+html,
+body {
+  font-family: "Roboto", sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+/** 
+*
+* Sistema De Grillas funcional a 12 columnas
+* 
+*/
+
+.container {
+  width: 95%;
+  height: 100%;
+  padding: 1%;
+  margin: 0.9375rem auto;
+  background-color: var(--bg);
+}
+
+.col,
+.col-12,
+.columns,
+.columns-row,
+.columns.columns-12 {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+}
+
+/** 
+*
+* Sistema De Grillas para Escritorio, 100% seleccionable
+* 
+*/
+.col-11,
+.columns.columns-11 {
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+}
+
+.col-10,
+.columns.columns-10 {
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+}
+
+.col-9,
+.columns.columns-9 {
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+}
+
+.col-8,
+.columns.columns-8 {
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+}
+
+.col-7,
+.columns.columns-7 {
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+}
+
+.col-6,
+.columns.columns-6 {
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+}
+
+.col-5,
+.columns.columns-5 {
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+}
+
+.col-4,
+.columns.columns-4 {
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+
+.col-3,
+.columns.columns-3 {
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+.col-2,
+.columns.columns-2 {
+  grid-template-columns: 1fr 1fr;
+}
+
+.col-1,
+.columns.columns-1 {
+  grid-template-columns: 1fr;
+}
+
+/** 
+*
+* Sistema De Grillas funcional a 6 columnas para pantallas menores a 1024 px
+* 
+*/
+
+@media screen and (max-width: 64rem) {
+  .col,
+  .columns,
+  .columns-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+  }
+}
+
+/** 
+*
+* Sistema De Grillas funcional a 3 columnas para pantallas menores a 770 px
+* 
+*/
+
+@media screen and (max-width: 48.125rem) {
+  .col,
+  .columns,
+  .columns-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+
+/** 
+*
+* Sistema De Grillas funcional a 1 columnas para pantallas moviles
+* 
+*/
+
+@media screen and (max-width: 26.5625rem) {
+  .col,
+  .columns,
+  .columns-row {
+    display: grid;
+    grid-template-columns: 1fr;
+    overflow: hidden;
+  }
+}
+
+/** 
+*
+* Sistema De Grillas En modo columna completa
+* 
+*/
+
+.col-column,
+.columns-column {
+  display: flex;
+  flex-direction: column;
+}
+
+/** 
+*
+* Estilo de botones
+* 
+*/
+
+button,
+.btn,
+.btn-primary,
+.btn.btn-primary {
+  display: inline-block;
+  font-size: var(--btn-fsize);
+  color: var(--color);
+  background-color: var(--primary);
+  border: 0.0625rem solid;
+  text-decoration: none;
+  border-radius: 0.9375rem;
+  text-align: center;
+  cursor: pointer;
+  padding: 0.25rem;
+}
+
+a.btn {
+  padding: 0.375rem;
+}
+
+button:hover,
+.btn:hover {
+  background-color: var(--primary-contast);
+}
+
+.btn.btn-seccundary {
+  background-color: var(--complementary);
+}
+.btn.btn-seccundary:hover {
+  background-color: #b5a041;
+}
+
+.btn.btn-danger,
+.btn.btn-error {
+  background-color: var(--danger);
+}
+
+.btn.btn-danger:hover,
+.btn.btn-error:hover {
+  background-color: #b56865;
+}
+
+.btn.btn-success {
+  background-color: var(--success);
+}
+
+.btn.btn-success:hover {
+  background-color: #4ab570;
+}
+
+.btn.btn-dark {
+  background-color: var(--dark);
+}
+.btn.btn-dark:hover {
+  background-color: #4a444f;
+}
+
+.btn.btn-purple {
+  background-color: var(--purple);
+}
+
+.btn.btn-purple:hover {
+  background-color: #5b2f82;
+}
+
+/**
+*
+* Botones Cuadrados
+*
+*/
+
+.btn.btn-square {
+  border-radius: 0;
+}
+
+/* Botones de Iconos */
+
+.btn.btn-icon {
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 50%;
+}
+
+/**
+*
+* Botones por tamaños SM (SMALL), MD (MEDIUM), LL (LARGE), XL (EXTRA-LARGE), FL (FULL ROW)
+*
+*/
+
+.btn.btn-sm {
+  width: 4.375rem;
+}
+
+.btn.btn-md {
+  width: 11.25rem;
+}
+
+.btn.btn-ll {
+  width: 18.125rem;
+}
+
+.btn.btn-xl {
+  width: 28.125rem;
+}
+
+.btn.btn-fl {
+  width: 100%;
+}
+
+/**
+*
+* Navbar Design
+*
+*/
+
+/* <nav> Tag */
+.navbar {
+  padding: 0.9375rem 0.625rem;
+  background-color: var(--dark);
+}
+
+/* Navbar Fixed */
+
+.navbar.fixed {
+  position: sticky;
+  top: 0;
+}
+
+/* Container For Navbar Elements use <ul> Tag */
+
+.nv-components {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+/* Icon for Navbar use <li> Tag */
+
+.navbar-icon {
+  float: left;
+  padding: 0.625rem 0.625rem;
+  color: var(--color);
+}
+
+/* Links en la parte Izquierda de la pantalla <li> Tag */
+
+.navbar-element {
+  float: left;
+}
+
+.navbar-item {
+  padding: 0 0.5rem;
+  color: var(--color);
+}
+
+.navbar-element .navbar-item {
+  display: block;
+  color: var(--color);
+  text-align: center;
+  padding: 0.875rem 1rem;
+  text-decoration: none;
+  overflow: hidden;
+  list-style: none;
+}
+
+.navbar-element .navbar-item:hover {
+  color: var(--color);
+  text-align: center;
+  text-decoration: none;
+  background: var(--hover-menu);
+}
+
+/* Links en la parte Derecha de la pantalla <li> Tag */
+
+.navbar-end {
+  float: right;
+}
+
+.navbar-end .navbar-item {
+  display: block;
+  color: var(--color);
+  text-align: center;
+  padding: 0.875rem 1rem;
+  text-decoration: none;
+  overflow: hidden;
+  list-style: none;
+}
+
+.navbar-item:hover {
+  background-color: var(--hover-menu);
+}
+
+/* Botones Activos en la barra de navegacion para resaltarlos <li> Tag */
+
+.active {
+  background-color: var(--active);
+}
+
+.active:hover {
+  background-color: var(--active-hover);
+}
+
+/* Responsive Navbar */
+
+@media screen and (max-width: 26.5625rem) {
+  .navbar-icon {
+    float: none;
+    text-align: center;
+    display: block;
+    width: 100%;
+  }
+  .navbar-element {
+    float: none;
+  }
+  .navbar-end {
+    float: none;
+  }
+  .navbar-item {
+    display: block;
+    width: 100%;
+  }
+}
