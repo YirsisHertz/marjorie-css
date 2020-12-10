@@ -395,3 +395,42 @@ button:hover,
     width: 100%;
   }
 }
+
+/**
+* Footer
+*/
+
+.footer {
+  background: var(--menu);
+  color: var(--color);
+  text-align: center;
+}
+
+.footer ul {
+  list-style: none;
+}
+
+.footer a {
+  color: var(--color);
+  text-decoration: none;
+}
+
+/* Article Container */
+
+.article-container {
+  padding: 1.25rem;
+  background-color: var(--primary);
+  color: var(--color);
+  text-align: justify;
+}
+
+/* Images */
+
+.img {
+  margin: auto 0;
+  padding: 0.625rem;
+}
+
+.img.circle {
+  border-radius: 50%;
+}

@@ -1,0 +1,6 @@
+.article-container {
+  padding: 1.25rem;
+  background-color: var(--primary);
+  color: var(--color);
+  text-align: justify;
+}
