@@ -1,6 +1,6 @@
 {
   "name": "marjorie-css",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "Marjorie CSS es un Framework de CSS facil de manipular, escalabilidad y facilidad de adaptacion para nuevos usuarios de frameworks",
   "main": "index.js",
   "scripts": {
